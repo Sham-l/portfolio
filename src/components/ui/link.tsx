@@ -1,6 +1,6 @@
 'use client';
 
-import NextLink from 'next/link';
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -11,7 +11,7 @@ interface LinkProps {
   isActive: boolean;
 }
 
-const Link = ({ href, children, className, isActive }: LinkProps) => {
+const CLink = ({ href, children, className, isActive }: LinkProps) => {
   // const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   //   e.preventDefault();
   //   const targetId = href.replace('#', '');
@@ -21,7 +21,7 @@ const Link = ({ href, children, className, isActive }: LinkProps) => {
   // };
 
   return (
-    <NextLink
+    <Link
       // onClick={handleClick}
       href={href}
       className={cn(
@@ -42,8 +42,8 @@ const Link = ({ href, children, className, isActive }: LinkProps) => {
         )}
       ></span>
       {children}
-    </NextLink>
+    </Link>
   );
 };
 
-export default Link;
+export default CLink;

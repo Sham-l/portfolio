@@ -8,6 +8,7 @@ import { Button } from '@components/ui/button';
 import Linkedin from '@assets/icons/linkedin.svg';
 import Github from '@assets/icons/github.svg';
 import Link from 'next/link';
+import SocialLinks from '@components/socialLinks';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,22 +31,7 @@ export default function RootLayout({
       >
         <CursorTracker />
         <Galaxy />
-        <div className="absolute right-10 top-4 space-x-5 text-slate-500">
-          <Link href="https://www.linkedin.com/in/shameelk/">
-            <Button
-              variant="link"
-              className="w-max px-0 text-slate-500 transition-all hover:scale-110"
-            >
-              <Linkedin />
-            </Button>
-          </Link>
-          <Link href="https://github.com/sham-l">
-          <Button variant="link" className="px-0 text-slate-500 transition-all hover:scale-110">
-            <Github />
-          </Button>
-          </Link>
-         
-        </div>
+        <SocialLinks className='hidden md:right-10 md:top-5 md:fixed'/>
 
         <div className="">{children}</div>
       </body>

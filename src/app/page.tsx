@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <div className="mx-auto flex h-max max-w-[1400px] flex-col overflow-auto md:h-[90vh] md:flex-row md:overflow-hidden">
-      <div className="flex flex-col px-8 pt-28 md:pt-32 lg:px-16 xl:px-32">
+      <div className="flex flex-col px-5 pt-28 md:pt-32 lg:px-16 xl:px-32">
         <div className="text-left">
           <h1 className="mb-2 text-4xl font-bold text-[#ccd6f6] lg:text-5xl">Shameel K</h1>
           <h2 className="mb-4 text-xl font-medium text-[#ccd6f6] lg:text-2xl">Frontend Engineer</h2>
@@ -64,7 +64,7 @@ const Home = () => {
         </div>
         <Skills />
       </div>
-      <div className="flex-1 scroll-smooth px-8 md:snap-y md:snap-mandatory md:overflow-y-auto lg:px-16 xl:px-32">
+      <div className="flex-1 scroll-smooth px-5 md:snap-y md:snap-mandatory md:overflow-y-auto lg:px-16 xl:px-32">
         <div
           id="about"
           className="flex max-w-[600px] snap-start text-slate-200 md:min-h-[90vh] md:pt-32"
@@ -138,7 +138,7 @@ export default Home;
 
 const Skills = () => {
   return (
-    <div className="to-slate-transparent mt-8 flex flex-wrap items-center justify-between gap-x-3 bg-gradient-to-t from-black/20 py-2">
+    <div className="to-slate-transparent mt-8 grid grid-cols-6 gap-y-3 bg-gradient-to-t from-black/20 via-transparent to-transparent py-2">
       <ReactIcon />
       <Typescript />
       <Javascript />

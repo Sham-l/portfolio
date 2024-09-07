@@ -1,8 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Link from './ui/link';
+import CLink from './ui/link';
 import { cn } from '@lib/utils';
 import { useActiveSection } from '@utils/hooks/useIntersectionObserver';
+import { Button } from './ui/button';
+import { Github, Linkedin } from '@assets/icons';
+import Link from 'next/link';
+import SocialLinks from './socialLinks';
 
 const HomeLinks = () => {
   const sectionIds = ['about', 'experience', 'projects'];
@@ -48,13 +52,13 @@ const HomeLinks = () => {
   return (
     <div
       className={cn(
-        'fixed right-0 top-0 flex w-screen px-8 py-5 transition-all duration-500 md:relative md:w-max md:px-0',
+        'fixed right-0 left-0 top-0 flex justify-between  w-screen overflow-hidden px-5 py-4 transition-all duration-500 md:relative md:w-max md:px-0 items-center',
         { 'bg-[#0c1520]': isScrolled },
       )}
     >
-      <div className="flex items-center gap-x-8 md:flex-col md:items-start md:gap-x-0 md:gap-y-5">
+      <div className="flex gap-x-4 md:flex-col md:items-start md:gap-x-0 md:gap-y-5">
         {links.map((link, _) => (
-          <Link
+          <CLink
             key={link.key}
             isActive={activeSection === link.id}
             className={cn('group flex items-center gap-2', link.animate)}
@@ -68,9 +72,11 @@ const HomeLinks = () => {
             >
               {link.text}
             </span>
-          </Link>
+          </CLink>
         ))}
       </div>
+      
+      <SocialLinks className="md:hidden" />
     </div>
   );
 };
