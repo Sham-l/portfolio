@@ -5,7 +5,7 @@ import React from 'react'
 
 const SocialLinks = ({ className }: { className: string }) => {
   return (
-    <div className={cn("space-x-2 flex items-center text-slate-500 md:absolute", className)}>
+    <div className={cn("space-x-4 flex items-center text-slate-500 md:absolute", className)}>
     <Link className='overflow-hidden' href="https://www.linkedin.com/in/shameelk/">
      
         <Linkedin />
