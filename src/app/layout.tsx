@@ -3,6 +3,11 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import CursorTracker from '@components/cursorTracker';
 import HomeLinks from '@components/homeLinks';
+import Galaxy from '@components/galaxy';
+import { Button } from '@components/ui/button';
+import Linkedin from '@assets/icons/linkedin.svg';
+import Github from '@assets/icons/github.svg';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,12 +23,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={'min-h-screen md:max-h-screen md:overflow-hidden bg-gradient-to-b from-[#0c1520] via-[#131f30] to-black '}>
+      <body
+        className={
+          'min-h-screen bg-gradient-to-b from-[#0c1520] via-[#131f30] to-black md:max-h-screen md:overflow-hidden'
+        }
+      >
         <CursorTracker />
-        <div className="">
-          
-          {children}
+        <Galaxy />
+        <div className="absolute right-10 top-4 space-x-5 text-slate-500">
+          <Link href="https://www.linkedin.com/in/shameelk/">
+            <Button
+              variant="link"
+              className="w-max px-0 text-slate-500 transition-all hover:scale-110"
+            >
+              <Linkedin />
+            </Button>
+          </Link>
+          <Link href="https://github.com/sham-l">
+          <Button variant="link" className="px-0 text-slate-500 transition-all hover:scale-110">
+            <Github />
+          </Button>
+          </Link>
+         
         </div>
+
+        <div className="">{children}</div>
       </body>
     </html>
   );

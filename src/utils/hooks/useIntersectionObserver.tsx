@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 
 export function useActiveSection(sectionIds: string[], threshold = 0.6) {
@@ -15,7 +15,7 @@ export function useActiveSection(sectionIds: string[], threshold = 0.6) {
             setActiveSection(id);
           }
         },
-        { threshold }
+        { threshold },
       );
 
       observer.observe(element);

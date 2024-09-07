@@ -35,7 +35,7 @@ const Link = ({ href, children, className, isActive }: LinkProps) => {
     >
       <span
         className={cn(
-          'h-px w-8 bg-slate-500 transition-all duration-300 group-hover:w-12 group-hover:bg-slate-200 hidden md:block',
+          'hidden h-px w-8 bg-slate-500 transition-all duration-300 group-hover:w-12 group-hover:bg-slate-200 md:block',
           {
             'w-12 bg-slate-200': isActive,
           },

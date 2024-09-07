@@ -3,7 +3,7 @@ import Link from '@components/ui/link';
 import React from 'react';
 import ExperienceCard from '@components/experienceCard';
 import ProjectCard from '@components/projectCard';
-import { Git, Javascript, ReactIcon, ReactQuery, Redux, Tailwind, Typescript } from '@assets/icons';
+import { Git, Javascript, ReactIcon, ReactQuery, Redux, Tailwind, Typescript, Zod } from '@assets/icons';
 
 const Home = () => {
   const skills = {
@@ -50,7 +50,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="mx-auto flex h-max overflow-auto md:h-[90vh] max-w-[1400px] md:overflow-hidden flex-col md:flex-row">
+    <div className="mx-auto flex h-max max-w-[1400px] flex-col overflow-auto md:h-[90vh] md:flex-row md:overflow-hidden">
       <div className="flex flex-col px-8 pt-28 md:pt-32 lg:px-16 xl:px-32">
         <div className="text-left">
           <h1 className="mb-2 text-4xl font-bold text-[#ccd6f6] lg:text-5xl">Shameel K</h1>
@@ -62,18 +62,21 @@ const Home = () => {
         <div className="mt-8 min-w-full">
           <HomeLinks />
         </div>
-        <Skills/>
+        <Skills />
       </div>
-      <div className="flex-1 md:snap-y md:snap-mandatory md:overflow-y-auto scroll-smooth px-8 lg:px-16 xl:px-32 ">
-        <div id="about" className="flex md:min-h-[90vh] max-w-[600px] snap-start  md:pt-32 text-slate-200">
+      <div className="flex-1 scroll-smooth px-8 md:snap-y md:snap-mandatory md:overflow-y-auto lg:px-16 xl:px-32">
+        <div
+          id="about"
+          className="flex max-w-[600px] snap-start text-slate-200 md:min-h-[90vh] md:pt-32"
+        >
           <div>
-            <p className="rounded-md md:px-5 py-10 leading-relaxed tracking-normal shadow-lg shadow-[#0d1622]">
-              Hi, I’m a passionate frontend developer with over 1.5 years of experience
-              creating clean, responsive, and interactive web applications. My expertise lies in
-              building user-friendly interfaces with React, Next.js, and modern web technologies. I
-              have 1 year of industry experience, where I’ve contributed to dynamic projects,
-              solving real-world problems with elegant solutions. Beyond coding, I enjoy playing
-              games, tackling CSS challenges, and much more. I also love connecting with others and
+            <p className="rounded-md py-10 leading-relaxed tracking-normal shadow-lg shadow-[#0d1622] md:px-5">
+              Hi, I’m a passionate frontend developer with over 1.5 years of experience creating
+              clean, responsive, and interactive web applications. My expertise lies in building
+              user-friendly interfaces with React, Next.js, and modern web technologies. I have 1
+              year of industry experience, where I’ve contributed to dynamic projects, solving
+              real-world problems with elegant solutions. Beyond coding, I enjoy playing games,
+              tackling CSS challenges, and much more. I also love connecting with others and
               continuously learning—whether it’s mastering a new tech skill or exploring the
               evolving world of AI. I’m constantly seeking new challenges that let me blend
               creativity with problem-solving. Let’s connect and create something awesome together!
@@ -82,7 +85,7 @@ const Home = () => {
         </div>
         <div
           id="experience"
-          className="flex md:min-h-[90vh] max-w-[600px] snap-start flex-col gap-y-10 pt-10 md:pt-32 text-white"
+          className="flex max-w-[600px] snap-start flex-col gap-y-10 pt-10 text-white md:min-h-[90vh] md:pt-32"
         >
           <ExperienceCard
             startDate={experienceData[0].startDate}
@@ -103,8 +106,11 @@ const Home = () => {
             />
           </div> */}
         </div>
-        <div className="h-[1px] w-full bg-slate-400 mt-10 md:hidden"></div>
-        <div id="projects" className="flex min-h-[90vh] max-w-[600px] snap-start pt-10 md:pt-32 text-white flex-col gap-y-10">
+        <div className="mt-10 h-[1px] w-3/4 mx-auto bg-slate-400/30 md:hidden"></div>
+        <div
+          id="projects"
+          className="flex min-h-[90vh] max-w-[600px] snap-start flex-col gap-y-10 pt-10 text-white md:pt-32"
+        >
           <ProjectCard
             header="Nanma Mall "
             description="Nama Mall is a modern e-commerce platform offering a seamless shopping experience."
@@ -120,16 +126,9 @@ const Home = () => {
           <ProjectCard
             header="Zinea"
             description="A Video streaming platform  where users can enjoy seamless, high-quality video content."
-            techs={[
-              skills.react,
-              skills.reactHookForm,
-              skills.tailwindCss,
-              skills.zod,
-              skills.css,
-            ]}
+            techs={[skills.react, skills.reactHookForm, skills.tailwindCss, skills.zod, skills.css]}
           />
         </div>
-        
       </div>
     </div>
   );
@@ -137,13 +136,9 @@ const Home = () => {
 
 export default Home;
 
-
-
-
-
 const Skills = () => {
   return (
-    <div className='flex gap-x-3 mt-14 bg-gradient-to-t from-black/20 to-slate-transparent py-2 items-center justify-center'>
+    <div className="to-slate-transparent mt-8 flex flex-wrap items-center justify-between gap-x-3 bg-gradient-to-t from-black/20 py-2">
       <ReactIcon />
       <Typescript />
       <Javascript />
@@ -151,7 +146,7 @@ const Skills = () => {
       <ReactQuery />
       <Redux />
       <Git />
+      <Zod/>
     </div>
-  )
-}
-
+  );
+};
