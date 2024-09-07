@@ -138,7 +138,7 @@ export default Home;
 
 const Skills = () => {
   return (
-    <div className="to-slate-transparent mt-8 grid grid-cols-6 gap-y-3 bg-gradient-to-t from-black/20 via-transparent to-transparent py-2">
+    <div className="to-slate-transparent mt-8 grid grid-cols-6 gap-y-3 bg-gradient-to-t  from-black/20 via-transparent to-transparent ">
       <ReactIcon />
       <Typescript />
       <Javascript />

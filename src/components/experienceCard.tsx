@@ -28,7 +28,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
       <div className="flex flex-col">
         <h3 className="text-lg font-semibold text-gray-100">
-          {header} <span className="mt-1 block md:ml-2 md:mt-0">@{company}</span>
+          {header} <span className="mt-1 block md:ml-2 md:inline md:mt-0">@{company}</span>
         </h3>
         <p className="mb-6 mt-2 text-sm leading-relaxed text-slate-400">{description}</p>
         <div className="flex flex-wrap gap-2">
