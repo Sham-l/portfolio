@@ -59,7 +59,7 @@ const Home = () => {
             I build pixel-perfect, engaging, and accessible digital experiences.
           </p>
         </div>
-        <div className="mt-8 min-w-full">
+        <div className="md:mt-8 md:min-w-full">
           <HomeLinks />
         </div>
         <Skills />
