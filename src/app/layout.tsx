@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <CursorTracker />
         <Galaxy />
-        <SocialLinks className='hidden md:right-10 md:top-5 md:fixed'/>
+        <SocialLinks className='hidden md:right-10 md:top-5 md:fixed md:block'/>
 
         <div className="">{children}</div>
       </body>

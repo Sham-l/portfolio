@@ -3,7 +3,7 @@ import Link from '@components/ui/link';
 import React from 'react';
 import ExperienceCard from '@components/experienceCard';
 import ProjectCard from '@components/projectCard';
-import { Git, Javascript, ReactIcon, ReactQuery, Redux, Tailwind, Typescript, Zod } from '@assets/icons';
+import { Css, Git, Javascript, ReactHookForm, ReactIcon, ReactQuery, Redux, Tailwind, Typescript, Zod } from '@assets/icons';
 
 const Home = () => {
   const skills = {
@@ -109,7 +109,7 @@ const Home = () => {
         <div className="mt-10 h-[1px] w-3/4 mx-auto bg-slate-400/30 md:hidden"></div>
         <div
           id="projects"
-          className="flex min-h-[90vh] max-w-[600px] snap-start flex-col gap-y-10 pt-10 text-white md:pt-32"
+          className="flex mb-5 md:min-h-[90vh] max-w-[600px] snap-start flex-col gap-y-10 pt-10 text-white md:pt-32"
         >
           <ProjectCard
             header="Nanma Mall "
@@ -146,7 +146,8 @@ const Skills = () => {
       <ReactQuery />
       <Redux />
       <Git />
-      <Zod/>
+      <Zod />
+      <ReactHookForm/>
     </div>
   );
 };
