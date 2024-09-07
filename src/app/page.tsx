@@ -50,7 +50,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="mx-auto flex h-max max-w-[1400px] flex-col overflow-auto md:h-[90vh] md:flex-row md:overflow-hidden">
+    <div className="mx-auto flex h-max max-w-[1400px] relative flex-col overflow-auto md:h-[90vh] md:flex-row md:overflow-hidden">
       <div className="flex flex-col px-5 pt-28 md:pt-32 lg:px-16 xl:px-32">
         <div className="text-left">
           <h1 className="mb-2 text-4xl font-bold text-[#ccd6f6] lg:text-5xl">Shameel K</h1>
