@@ -52,7 +52,7 @@ const HomeLinks = () => {
   return (
     <div
       className={cn(
-        'fixed top-0 right-0 left-0 flex justify-between w-full overflow-hidden px-5 py-4 transition-all duration-500 md:relative md:w-max md:px-0 items-center bg-orange-400',
+        'fixed left-0 top-0 flex justify-between w-screen overflow-hidden px-5 py-4 transition-all duration-500 md:relative md:w-max md:px-0 items-center',
         { 'bg-[#0c1520]': isScrolled },
       )}
     >

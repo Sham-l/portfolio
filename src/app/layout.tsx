@@ -9,6 +9,7 @@ import Linkedin from '@assets/icons/linkedin.svg';
 import Github from '@assets/icons/github.svg';
 import Link from 'next/link';
 import SocialLinks from '@components/socialLinks';
+// import { HomeLinksMobile } from '@components/homeLinks';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,13 +27,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          'min-h-screen bg-gradient-to-b from-[#0c1520] via-[#131f30] to-black md:max-h-screen md:overflow-hidden'
+          'min-h-screen bg-gradient-to-b from-[#0c1520] via-[#131f30] to-black relative md:max-h-screen md:overflow-hidden'
         }
       >
         <CursorTracker />
         <Galaxy />
         <SocialLinks className='hidden md:right-10 md:top-5 md:fixed md:block'/>
-
+        {/* <HomeLinksMobile /> */}
         <div className="">{children}</div>
       </body>
     </html>

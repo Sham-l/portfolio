@@ -22,7 +22,7 @@ const CursorTracker = () => {
         left: `${position.x - 450}px`,
         top: `${position.y - 450}px`,
       }}
-      className={`transparent pointer-events-none fixed -z-10 h-[900px] w-[900px] rounded-full bg-gradient-radial from-[#415c833a] via-[#1a29424d] to-transparent opacity-50 blur-md`}
+      className={`hidden md:block transparent pointer-events-none absolute -z-10 h-[900px] w-[900px] rounded-full bg-gradient-radial from-[#415c833a] via-[#1a29424d] to-transparent opacity-50 blur-md`}
     ></div>
   );
 };

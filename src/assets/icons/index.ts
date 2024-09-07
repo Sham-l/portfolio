@@ -11,6 +11,8 @@ import Git from './git.svg';
 import Zod from './zod.svg';
 import Linkedin from './linkedin.svg';
 import Github from './github.svg';
+import Phone from './phone.svg';
+import Gmail from './gmail.svg';
 
 export {
   Css,
@@ -26,4 +28,6 @@ export {
   Zod,
   Linkedin,
   Github,
+  Phone,
+  Gmail,
 };
